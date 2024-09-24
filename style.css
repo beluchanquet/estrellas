@@ -1,0 +1,157 @@
+:root {
+    --Moss-green: #334D42;
+    --Milkshake: #F7C2BC;
+    --Matcha: #DBE8C3;
+    --Tangerine: #FC8D08;
+    --Sunflower: #FFD04D;
+    --Marshmallow: #F4E2E1;
+    --Gray: #6c757d;
+    --White: #fff;
+    --Black: #000;
+    --font: outfit, Arial, sans-serif;
+  }
+  
+body {
+    font-family: var(--font);
+    margin: 0;
+    padding: 0;
+    background-color: var(--Marshmallow);
+    color: var(--Black);
+}
+  
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--White);
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+  
+h1, h2 {
+    color: var(--Moss-green);
+}
+  
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+  
+.table th, .table td {
+    border: 1px solid var(--Milkshake);
+    padding: 12px;
+    text-align: left;
+}
+  
+.table th {
+    background-color: var(--Moss-green);
+    color: var(--White);
+}
+  
+  .table tr:nth-child(even) {
+      background-color: var(--Matcha);
+  }
+  
+.table td:last-child {
+    font-size: 1.2em;
+    color: var(--Tangerine);
+}
+  
+.form-group {
+    margin-bottom: 20px;
+}
+  
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--Moss-green);
+    font-weight: bold;
+}
+  
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--Milkshake);
+    border-radius: 4px;
+    font-family: var(--font);
+    font-size: 16px;
+}
+  
+.btn {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: var(--font);
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+  
+.btn-primary {
+    background-color: var(--Tangerine);
+    color: var(--White);
+}
+  
+.btn-primary:hover {
+    background-color: var(--Sunflower);
+}
+  
+
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+  
+.alert-success {
+    background-color: var(--Matcha);
+    border-color: var(--Moss-green);
+    color: var(--Moss-green);
+}
+  
+body::before {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background-color: var(--Tangerine);
+    z-index: 1000;
+}
+  
+.container::before {
+    display: block;
+    text-align: center;
+    font-size: 2.5em;
+    color: var(--Moss-green);
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+  
+select.form-control {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23334D42' viewBox='0 0 12 12'%3E%3Cpath d='M10.293 3.293 6 7.586 1.707 3.293A1 1 0 0 0 .293 4.707l5 5a1 1 0 0 0 1.414 0l5-5a1 1 0 1 0-1.414-1.414z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    padding-right: 30px;
+}
+  
+textarea.form-control {
+    min-height: 100px;
+    resize: vertical;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+      
+    .table th, .table td {
+        padding: 8px;
+    }
+      
+    .btn {
+        width: 100%;
+    }
+}
